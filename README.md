@@ -30,3 +30,6 @@ The **Admin Panel** is a powerful and user-friendly web application designed for
 </br>
 
 ## The backend for this admin panel is available at [admin-panel-back](https://github.com/leilamamedova/admin-panel-back).
+
+
+![admin](https://github.com/user-attachments/assets/985719b6-643f-426c-b9d4-78f24b13c38b)
