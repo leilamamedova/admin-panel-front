@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Admin Panel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The **Admin Panel** is a powerful and user-friendly web application designed for administrators to manage and oversee various aspects of the system. Built with **React** and **Material-UI**, the app offers a seamless experience to efficiently handle tasks such as managing users, data, and settings.
 
-## Available Scripts
+## Features:
+- **User Authentication**: Secure login and management for administrators.
+- **Dashboard**: A comprehensive overview of key metrics and system health.
+- **CRUD Operations**: Create, Read, Update, and Delete operations for managing system data.
+- **Responsive Design**: Optimized for both desktop and mobile screens.
+- **Notifications**: Real-time notifications for important system updates.
+- **Multilingual Support**: Supports multiple languages via i18next for a global audience.
+- **Form Handling**: Easy-to-use forms for adding and editing system data.
+- **Data Tables**: Display and manage tabular data using MUI's Table components.
+- **File Uploads**: Use `react-dropzone` for handling file uploads.
 
-In the project directory, you can run:
+## Technologies Used:
+  - **React**: JavaScript library for building user interfaces.
+  - **React Router DOM**: For navigation between different views in the app.
+  - **Material-UI (MUI)**: Provides a set of React components for building a modern UI with ready-to-use material design components.
+  - **Redux & Redux Toolkit**: For state management across the application.
+  - **React-Redux**: For integrating Redux state management with React components.
+  - **Axios**: For making HTTP requests to fetch and send data to the server.
+  - **React-i18next**: For implementing internationalization (i18n) to support multiple languages.
+  - **SweetAlert2**: For displaying beautiful alerts and confirmations in the admin panel.
 
-### `npm start`
+- **Dev Tools**:
+  - **TypeScript**: Provides type safety and improved developer experience.
+  - **ESLint & Prettier**: For ensuring consistent code style and quality.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## The backend for this admin panel is available at [admin-panel-back](https://github.com/leilamamedova/admin-panel-back).
