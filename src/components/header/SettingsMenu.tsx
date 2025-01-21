@@ -7,10 +7,8 @@ import {
   Menu,
   MenuItem,
   Typography,
-  ListItemIcon,
 } from "@mui/material";
 
-import { LogoutIcon } from "assets/icons";
 import { logOut } from "components/auth/AuthBox";
 import useSettingsMenu from "components/header/hooks/useSettingsMenu";
 
@@ -27,6 +25,7 @@ const SettingsMenu = (): React.ReactElement => {
           <Avatar>A</Avatar>
         </Stack>
       </IconButton>
+
       <Menu
         anchorEl={anchorEl}
         id='account-menu'
@@ -43,17 +42,10 @@ const SettingsMenu = (): React.ReactElement => {
         }}
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}>
-        <MenuItem onClick={logOut}>
-          <ListItemIcon>
-            <LogoutIcon fontSize='small' />
-          </ListItemIcon>
-          Logout
-        </MenuItem>
+        <MenuItem onClick={logOut}>Logout</MenuItem>
       </Menu>
     </>
   );
 };
 
 export default SettingsMenu;
-
-SettingsMenu.displayName = "SettingsMenu";

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { IUseSettingsMenu } from "components/header/interfaces";
 
-export const useSettingsMenu = (): IUseSettingsMenu => {
+const useSettingsMenu = (): IUseSettingsMenu => {
   const [anchorEl, setAnchorEl] = useState<HTMLElement>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>): void => {
@@ -21,5 +21,3 @@ export const useSettingsMenu = (): IUseSettingsMenu => {
 };
 
 export default useSettingsMenu;
-
-useSettingsMenu.displayName = "useSettingsMenu";

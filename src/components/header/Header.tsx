@@ -12,13 +12,13 @@ const Header = ({ open, handleDrawerOpen }: IHeader): React.ReactElement => {
     <AppBar position='fixed' open={open}>
       <ToolbarContainer open={open}>
         <IconButton
+          buttonType={buttonTypes.inherit}
+          Icon={MenuIcon}
           edge='start'
           sx={{
             ...(open && { display: "none" }),
           }}
           onClick={handleDrawerOpen}
-          Icon={MenuIcon}
-          buttonType={buttonTypes.inherit}
         />
         <SettingsMenu />
       </ToolbarContainer>
@@ -27,5 +27,3 @@ const Header = ({ open, handleDrawerOpen }: IHeader): React.ReactElement => {
 };
 
 export default Header;
-
-Header.displayName = "Header";

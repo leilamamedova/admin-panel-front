@@ -69,5 +69,3 @@ const AuthBox = (): React.ReactElement => {
 };
 
 export default AuthBox;
-
-AuthBox.displayName = "AuthBox";

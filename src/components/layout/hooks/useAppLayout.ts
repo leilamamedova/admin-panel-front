@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { IUseAppLayout } from "components/layout/interfaces";
 
-export const useAppLayout = (): IUseAppLayout => {
+const useAppLayout = (): IUseAppLayout => {
   const [open, setOpen] = useState<boolean>(true);
 
   const handleDrawerOpen = (): void => {
@@ -21,5 +21,3 @@ export const useAppLayout = (): IUseAppLayout => {
 };
 
 export default useAppLayout;
-
-useAppLayout.displayName = "useAppLayout";

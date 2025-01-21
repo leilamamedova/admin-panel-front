@@ -10,11 +10,6 @@ export interface IButton extends ButtonProps {
   active?: boolean;
 }
 
-export interface ButtonStyleProps {
-  buttonType: buttonTypes;
-  active?: boolean;
-}
-
 export interface IIconButton extends IconButtonProps {
   Icon: any;
   buttonType: buttonTypes;
@@ -24,4 +19,9 @@ export interface IIconButton extends IconButtonProps {
   iconClassName?: any;
   tooltipClassName?: any;
   buttonClassName?: any;
+}
+
+export interface ButtonStyleProps {
+  buttonType: buttonTypes;
+  active?: boolean;
 }
