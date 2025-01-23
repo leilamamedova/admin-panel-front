@@ -201,5 +201,3 @@ export const useGamesTable = (): IUseGamesTable => {
     fetchData,
   };
 };
-
-useGamesTable.displayName = "useGamesTable";

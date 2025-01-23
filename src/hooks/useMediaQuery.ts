@@ -9,5 +9,3 @@ const useMediaQuery = (): IUseMediaQuery => {
 };
 
 export default useMediaQuery;
-
-useMediaQuery.displayName = "useMediaQuery";

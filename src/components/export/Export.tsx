@@ -20,5 +20,3 @@ const Export = ({ exportReport }: IExport): React.ReactElement => {
 };
 
 export default Export;
-
-Export.displayName = "Export";

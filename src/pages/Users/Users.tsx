@@ -7,5 +7,3 @@ const Users = (): React.ReactElement => {
 };
 
 export default Users;
-
-Users.displayName = "Users";

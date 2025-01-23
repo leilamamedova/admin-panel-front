@@ -65,5 +65,3 @@ const Menu = ({ open, handleDrawerClose }: IMenu): React.ReactElement => {
 };
 
 export default Menu;
-
-Menu.displayName = "Menu";

@@ -35,5 +35,3 @@ const Button = (props: IButton): React.ReactElement => {
 };
 
 export default Button;
-
-Button.displayName = "Button";

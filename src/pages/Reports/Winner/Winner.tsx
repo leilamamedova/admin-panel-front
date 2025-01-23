@@ -13,5 +13,3 @@ const Winner = (): React.ReactElement => {
 };
 
 export default Winner;
-
-Winner.displayName = "Winner";

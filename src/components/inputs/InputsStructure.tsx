@@ -78,5 +78,3 @@ const InputsStructure = ({
 };
 
 export default InputsStructure;
-
-InputsStructure.displayName = "InputsStructure";

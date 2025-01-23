@@ -14,5 +14,3 @@ const AuthLayout = ({ children }: IAuthLayout): React.ReactElement => {
 };
 
 export default AuthLayout;
-
-AuthLayout.displayName = "AuthLayout";

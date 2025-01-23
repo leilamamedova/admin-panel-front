@@ -113,5 +113,3 @@ export const useTable = ({
     exportData,
   };
 };
-
-useTable.displayName = "useTable";

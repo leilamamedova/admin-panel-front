@@ -5,10 +5,10 @@ import { useLocation } from "react-router-dom";
 
 import Breadcrumbs from "components/breadcrumbs/Breadcrumbs";
 import Header from "components/header/Header";
-import useAppLayout from "components/layout/hooks/useAppLayout";
+import { useAppLayout } from "components/layout/hooks/useAppLayout";
 import { IAppLayout } from "components/layout/interfaces";
 import { ContentHeader } from "components/layout/styles";
-import Menu from "components/menu";
+import Menu from "components/menu/Menu";
 import useMediaQuery from "hooks/useMediaQuery";
 
 const AppLayout = ({ children }: IAppLayout): React.ReactElement => {

@@ -1,8 +1,8 @@
 import React from "react";
 
-import AuthContainer from "components/containers/authContainer";
+import AuthContainer from "components/containers/authContainer/AuthContainer";
 import InputPlain from "components/inputs/InputPlain";
-import useLogin from "pages/Login/hooks/useLogin";
+import { useLogin } from "pages/Login/hooks/useLogin";
 import { useLoginStyles } from "pages/Login/styles";
 
 const Login = (): React.ReactElement => {
@@ -51,5 +51,3 @@ const Login = (): React.ReactElement => {
 };
 
 export default Login;
-
-Login.displayName = "Login";

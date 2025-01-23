@@ -13,5 +13,3 @@ const UserActivity = (): React.ReactElement => {
 };
 
 export default UserActivity;
-
-UserActivity.displayName = "UserActivity";

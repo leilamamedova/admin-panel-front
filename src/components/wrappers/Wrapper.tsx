@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { combineReducers } from "redux";
 import thunk from "redux-thunk";
 
-import ErrorBoundary from "components/errorHandlers";
+import ErrorBoundary from "components/errorHandlers/ErrorBoundary";
 import { authReducer } from "store/reducers/AuthReducer";
 import { userReducer } from "store/reducers/UserReducer";
 
@@ -31,5 +31,3 @@ export const Wrapper = ({
     </ErrorBoundary>
   </BrowserRouter>
 );
-
-Wrapper.displayName = "Wrapper";

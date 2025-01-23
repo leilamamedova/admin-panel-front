@@ -39,5 +39,3 @@ const DragAndDrop = ({
 };
 
 export default DragAndDrop;
-
-DragAndDrop.displayName = "DragAndDrop";

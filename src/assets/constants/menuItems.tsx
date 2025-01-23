@@ -1,5 +1,3 @@
-import React from "react";
-
 import { routes } from "assets/constants/routes";
 import { PersonIcon, SportsEsportsIcon, ArticleIcon } from "assets/icons";
 

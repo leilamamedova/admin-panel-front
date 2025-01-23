@@ -91,5 +91,3 @@ export const useUsersTable = (): IUseUsersTable => {
     fetchData,
   };
 };
-
-useUsersTable.displayName = "useUsersTable";

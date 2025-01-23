@@ -15,5 +15,3 @@ const Breadcrumbs = ({ breadcrumb }: IBreadcrumbs): React.ReactElement => {
 };
 
 export default Breadcrumbs;
-
-Breadcrumbs.displayName = "Breadcrumbs";

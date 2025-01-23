@@ -100,5 +100,3 @@ export const useUserActivityTable = (): IUseUserActivityTable => {
     fetchExport,
   };
 };
-
-useUserActivityTable.displayName = "useUserActivityTable";

@@ -7,5 +7,3 @@ const Games = (): React.ReactElement => {
 };
 
 export default Games;
-
-Games.displayName = "Games";

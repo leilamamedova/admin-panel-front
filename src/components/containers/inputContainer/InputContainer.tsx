@@ -15,5 +15,3 @@ const InputContainer = (Component) => {
 };
 
 export default InputContainer;
-
-InputContainer.displayName = "InputContainer";

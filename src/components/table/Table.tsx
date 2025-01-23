@@ -145,5 +145,3 @@ const Table = ({
 };
 
 export default Table;
-
-Table.displayName = "Table";

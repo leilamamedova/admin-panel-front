@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 
 import LoadingComponent from "components/loading/LoadingComponent";
-import Table from "components/table";
+import Table from "components/table/Table";
 import { columns, filters } from "pages/Reports/Winner/constants";
 import { useWinnerTable } from "pages/Reports/Winner/hooks/useWinnerTable";
 
@@ -30,5 +30,3 @@ const WinnerTable = (): React.ReactElement => {
 };
 
 export default WinnerTable;
-
-WinnerTable.displayName = "WinnerTable";

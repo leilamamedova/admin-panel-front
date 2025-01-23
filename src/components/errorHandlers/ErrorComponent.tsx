@@ -32,5 +32,3 @@ export const ErrorComponent = (): React.ReactElement => {
     </Container>
   );
 };
-
-ErrorComponent.displayName = "ErrorComponent";

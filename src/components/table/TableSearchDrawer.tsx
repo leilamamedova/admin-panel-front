@@ -52,5 +52,3 @@ const TableSearchDrawer = ({
 };
 
 export default TableSearchDrawer;
-
-TableSearchDrawer.displayName = "TableSearchDrawer";

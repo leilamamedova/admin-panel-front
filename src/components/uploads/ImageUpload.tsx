@@ -38,5 +38,3 @@ const ImageUpload = ({ value, onChange }: IImageUpload): React.ReactElement => {
 };
 
 export default ImageUpload;
-
-ImageUpload.displayName = "ImageUpload";

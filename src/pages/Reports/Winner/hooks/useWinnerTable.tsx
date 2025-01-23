@@ -99,5 +99,3 @@ export const useWinnerTable = (): IUseWinnerTable => {
     fetchExport,
   };
 };
-
-useWinnerTable.displayName = "useWinnerTable";

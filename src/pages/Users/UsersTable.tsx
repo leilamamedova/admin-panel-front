@@ -1,7 +1,7 @@
 import React from "react";
 
 import LoadingComponent from "components/loading/LoadingComponent";
-import Table from "components/table";
+import Table from "components/table/Table";
 import { columns, filters } from "pages/Users/constants";
 import { useUsersTable } from "pages/Users/hooks/useUsersTable";
 
@@ -25,5 +25,3 @@ const UsersTable = (): React.ReactElement => {
 };
 
 export default UsersTable;
-
-UsersTable.displayName = "UsersTable";

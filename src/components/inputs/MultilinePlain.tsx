@@ -2,7 +2,7 @@ import React from "react";
 
 import { TextField } from "@mui/material";
 
-import InputContainer from "components/containers/inputContainer";
+import InputContainer from "components/containers/inputContainer/InputContainer";
 import { IMultilinePlain } from "components/inputs/interfaces";
 
 const MultilinePlain = ({
@@ -36,5 +36,3 @@ const MultilinePlain = ({
 };
 
 export default InputContainer(MultilinePlain);
-
-MultilinePlain.displayName = "MultilinePlain";

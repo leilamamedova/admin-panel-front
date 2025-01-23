@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 
 import LoadingComponent from "components/loading/LoadingComponent";
-import Table from "components/table";
+import Table from "components/table/Table";
 import { columns, filters } from "pages/Reports/UserActivity/constants";
 import { useUserActivityTable } from "pages/Reports/UserActivity/hooks/useUserActivityTable";
 
@@ -31,5 +31,3 @@ const UserActivityTable = (): React.ReactElement => {
 };
 
 export default UserActivityTable;
-
-UserActivityTable.displayName = "UserActivityTable";

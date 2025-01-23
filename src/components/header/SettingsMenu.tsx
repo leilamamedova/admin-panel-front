@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 import { logOut } from "components/auth/AuthBox";
-import useSettingsMenu from "components/header/hooks/useSettingsMenu";
+import { useSettingsMenu } from "components/header/hooks/useSettingsMenu";
 
 const SettingsMenu = (): React.ReactElement => {
   const { anchorEl, handleClick, handleClose } = useSettingsMenu();

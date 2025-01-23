@@ -5,7 +5,7 @@ import { buttonTypes } from "components/buttons/constants/buttonTypes";
 import Drawer from "components/drawers/Drawer";
 import InputsStructure from "components/inputs/InputsStructure";
 import LoadingComponent from "components/loading/LoadingComponent";
-import Table from "components/table";
+import Table from "components/table/Table";
 import { columns, filters } from "pages/Games/constants";
 import { useGamesTable } from "pages/Games/hooks/useGamesTable";
 
@@ -67,5 +67,3 @@ const GamesTable = (): React.ReactElement => {
 };
 
 export default GamesTable;
-
-GamesTable.displayName = "GamesTable";

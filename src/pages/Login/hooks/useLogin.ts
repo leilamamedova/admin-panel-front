@@ -54,7 +54,3 @@ export const useLogin = (): IUseLogin => {
     setLoginData,
   };
 };
-
-export default useLogin;
-
-useLogin.displayName = "useLogin";

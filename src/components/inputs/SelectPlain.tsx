@@ -3,7 +3,7 @@ import React from "react";
 import { TextField } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 
-import InputContainer from "components/containers/inputContainer";
+import InputContainer from "components/containers/inputContainer/InputContainer";
 import { ISelectPlain } from "components/inputs/interfaces";
 
 const SelectPlain = ({
@@ -37,5 +37,3 @@ const SelectPlain = ({
 };
 
 export default InputContainer(SelectPlain);
-
-SelectPlain.displayName = "SelectPlain";

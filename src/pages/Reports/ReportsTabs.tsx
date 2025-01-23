@@ -58,5 +58,3 @@ const ReportsTabs = (): React.ReactElement => {
   );
 };
 export default ReportsTabs;
-
-ReportsTabs.displayName = "ReportsTabs";

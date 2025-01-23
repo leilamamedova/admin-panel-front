@@ -2,7 +2,7 @@ import React from "react";
 
 import { Checkbox, FormControlLabel } from "@mui/material";
 
-import InputContainer from "components/containers/inputContainer";
+import InputContainer from "components/containers/inputContainer/InputContainer";
 import { ICheckboxPlain } from "components/inputs/interfaces";
 
 const CheckboxPlain = ({
@@ -29,5 +29,3 @@ const CheckboxPlain = ({
 };
 
 export default InputContainer(CheckboxPlain);
-
-CheckboxPlain.displayName = "CheckboxPlain";

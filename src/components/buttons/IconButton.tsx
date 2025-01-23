@@ -34,5 +34,3 @@ const IconButton = (props: IIconButton): React.ReactElement => {
 };
 
 export default IconButton;
-
-IconButton.displayName = "IconButton";

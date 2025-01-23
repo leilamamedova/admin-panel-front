@@ -2,7 +2,7 @@ import React from "react";
 
 import { TextField } from "@mui/material";
 
-import InputContainer from "components/containers/inputContainer";
+import InputContainer from "components/containers/inputContainer/InputContainer";
 import { IInputPlain } from "components/inputs/interfaces";
 
 const InputPlain = ({
@@ -37,5 +37,3 @@ const InputPlain = ({
 };
 
 export default InputContainer(InputPlain);
-
-InputPlain.displayName = "InputPlain";

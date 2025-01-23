@@ -54,5 +54,3 @@ const TableSearch = ({
 };
 
 export default TableSearch;
-
-TableSearch.displayName = "TableSearch";

@@ -16,5 +16,3 @@ export const useTableSearch = (): IUseTableSearch => {
     toggleDrawer,
   };
 };
-
-useTableSearch.displayName = "useTableSearch";
