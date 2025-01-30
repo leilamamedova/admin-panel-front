@@ -13,8 +13,6 @@ import { IReducers } from "store/reducers/interfaces/reducers";
 const LoginPage = LazyImportPage("Login/Login");
 const UsersPage = LazyImportPage("Users/Users");
 const GamesPage = LazyImportPage("Games/Games");
-const UserActivityPage = LazyImportPage("Reports/UserActivity/UserActivity");
-const WinnerPage = LazyImportPage("Reports/Winner/Winner");
 
 function LazyImportPage(
   route,
@@ -33,11 +31,6 @@ const Pages = (): React.ReactElement => {
           <Route path={routes.index} element={<Navigate to={routes.users} />} />
           <Route path={routes.users} element={<UsersPage />} />
           <Route path={routes.games} element={<GamesPage />} />
-          <Route
-            path={routes.reports.userActivity}
-            element={<UserActivityPage />}
-          />
-          <Route path={routes.reports.winner} element={<WinnerPage />} />
         </Routes>
       </AppLayout>
       {/* )} */}

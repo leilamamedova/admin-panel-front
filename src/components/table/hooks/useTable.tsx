@@ -9,18 +9,13 @@ import {
   useTableProps,
 } from "components/table/interfaces";
 import { updateObject } from "utils/Utils";
-import { formatStore, toFieldSet } from "utils/Utils";
+import { toFieldSet } from "utils/Utils";
 
-export const useTable = ({
-  filters,
-  fetchData,
-  fetchExport,
-}: useTableProps): IUseTable => {
+export const useTable = ({ filters, fetchData }: useTableProps): IUseTable => {
   const [tableCredentials, setTableCredentials] = useState<ITableCredentials>(
     tableInitialCredentials,
   );
   const [searchFields, setSearchFields] = useState<IFilters[]>([]);
-  const [isAll, setIsAll] = useState<boolean>(false);
 
   const handleChangePage = (_event: unknown, newPage: number): void => {
     const updatedData = updateObject(tableCredentials, {
@@ -79,37 +74,20 @@ export const useTable = ({
     setSearchFields(updatedSearchFields);
   };
 
-  const handleFullTextSearch = (searchValue: string): void => {
-    const updatedData = updateObject(tableCredentials, {
-      fullTextSearch: searchValue,
-      page: 0,
-    });
-    setTableCredentials(updatedData);
-    fetchData(updatedData);
-  };
-
-  const exportData = (): void => {
-    fetchExport(tableCredentials, isAll);
-  };
-
   useEffect(() => {
     setSearchFields(filters);
   }, [filters]);
 
-  const store: ITableContext[] = formatStore({
-    searchFields: [searchFields, setSearchFields],
+  const store: ITableContext = {
+    searchFields,
     handleSearchFieldChange,
     searchByFields,
     resetFieldValues,
-    handleFullTextSearch,
-  });
+  };
 
   return {
     store,
-    isAll,
-    setIsAll,
     handleChangePage,
     handleChangeLimit,
-    exportData,
   };
 };

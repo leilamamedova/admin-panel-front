@@ -18,14 +18,6 @@ const webConfig = {
     createGames: "/games",
     updateGames: (id: number) => `/games/${id}`,
   },
-  reports: {
-    // USER ACTIVITY
-    getUserActivity: "/UserActivityStats",
-    exportUserActivity: "/UserActivityStats/export",
-    // WINNER
-    getWinner: "/WinnerStats",
-    exportWinner: "/WinnerStats/export",
-  },
 };
 
 export default webConfig;

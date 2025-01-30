@@ -7,28 +7,22 @@ export interface ITable {
   columns: IColumns[];
   rows: any;
   pageData: IPage;
-  showSearchDrawer?: boolean;
   filters?: IFilters[];
-  fetchData?: (updatedData: ITableCredentials) => void;
-  fetchExport?: (updatedData: ITableCredentials, isAll: boolean) => void;
-  showExportData?: boolean;
+  showSearchDrawer?: boolean;
   showSearch?: boolean;
   additionalButtons?: React.ReactElement;
+  fetchData?: (updatedData: ITableCredentials) => void;
 }
 
 export interface useTableProps {
   filters?: IFilters[];
   fetchData?: (updatedData: ITableCredentials) => void;
-  fetchExport?: (updatedData: ITableCredentials, isAll: boolean) => void;
 }
 
 export interface IUseTable {
-  store: ITableContext[];
-  isAll: boolean;
-  setIsAll: React.Dispatch<React.SetStateAction<boolean>>;
+  store: ITableContext;
   handleChangePage: (_event: unknown, newPage: number) => void;
   handleChangeLimit: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  exportData: () => void;
 }
 
 export interface ITableSearch {
@@ -62,12 +56,8 @@ export interface ITableCredentials extends IPage {
 }
 
 export interface ITableContext {
-  searchFields: {
-    get: () => IFilters[];
-    set: (value) => Dispatch<SetStateAction<IFilters[]>>;
-  };
+  searchFields: IFilters[];
   handleSearchFieldChange: (value: any, name: string) => void;
   searchByFields: () => void;
   resetFieldValues: () => void;
-  handleFullTextSearch: (searchValue: string) => void;
 }

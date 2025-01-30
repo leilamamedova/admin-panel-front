@@ -1,5 +1,5 @@
 import { routes } from "assets/constants/routes";
-import { PersonIcon, SportsEsportsIcon, ArticleIcon } from "assets/icons";
+import { PersonIcon, SportsEsportsIcon } from "assets/icons";
 
 export const drawerWidth = 240;
 
@@ -13,10 +13,5 @@ export const menuItems = [
     icon: <SportsEsportsIcon />,
     label: "Games",
     link: routes.games,
-  },
-  {
-    icon: <ArticleIcon />,
-    label: "Reports",
-    link: routes.reports.userActivity,
   },
 ];

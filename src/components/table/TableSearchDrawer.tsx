@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from "react";
+import React, { useContext } from "react";
 
 import { Button, Card, CardActions, ClickAwayListener } from "@mui/material";
 
@@ -20,18 +20,18 @@ const TableSearchDrawer = ({
   });
 
   const store: ITableContext = useContext(TableContext);
-
-  return useMemo(
-    () =>
-      open && (
+  return (
+    <>
+      {open && (
         <ClickAwayListener onClickAway={() => setOpen(false)}>
           <Card classes={{ root: classes.root }}>
             <InputsStructure
-              fields={store.searchFields.get()}
+              fields={store.searchFields}
               setFieldValue={setFieldValue}
               className={classes.fieldWrapper}
               variant='flex'
             />
+
             <CardActions className={classes.cardActions}>
               <Button
                 color='primary'
@@ -46,8 +46,8 @@ const TableSearchDrawer = ({
             </CardActions>
           </Card>
         </ClickAwayListener>
-      ),
-    [open],
+      )}
+    </>
   );
 };
 

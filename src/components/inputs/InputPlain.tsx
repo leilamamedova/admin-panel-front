@@ -2,7 +2,7 @@ import React from "react";
 
 import { TextField } from "@mui/material";
 
-import InputContainer from "components/containers/inputContainer/InputContainer";
+import InputContainer from "components/inputs/InputContainer";
 import { IInputPlain } from "components/inputs/interfaces";
 
 const InputPlain = ({

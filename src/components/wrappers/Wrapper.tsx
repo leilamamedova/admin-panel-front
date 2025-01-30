@@ -8,10 +8,8 @@ import thunk from "redux-thunk";
 
 import ErrorBoundary from "components/errorHandlers/ErrorBoundary";
 import { authReducer } from "store/reducers/AuthReducer";
-import { userReducer } from "store/reducers/UserReducer";
 
 export const rootReducer = combineReducers({
-  userReducer,
   authReducer,
 });
 

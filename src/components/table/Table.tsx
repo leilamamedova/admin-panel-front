@@ -9,15 +9,9 @@ import {
   TableHead,
   TablePagination,
   TableRow,
-  Checkbox,
-  FormControlLabel,
-  Stack,
 } from "@mui/material";
 import MuiTable from "@mui/material/Table";
 
-import { GetAppIcon } from "assets/icons";
-import { buttonTypes } from "components/buttons/constants/buttonTypes";
-import IconButton from "components/buttons/IconButton";
 import { useTable } from "components/table/hooks/useTable";
 import { ITable } from "components/table/interfaces";
 import { useTableStyles } from "components/table/styles";
@@ -37,23 +31,13 @@ const Table = ({
   showSearchDrawer = false,
   showSearch = false,
   additionalButtons = null,
-  showExportData = false,
   fetchData,
-  fetchExport,
 }: ITable): React.ReactElement => {
   const classes = useTableStyles();
 
-  const {
-    store,
-    isAll,
-    setIsAll,
-    handleChangePage,
-    handleChangeLimit,
-    exportData,
-  } = useTable({
+  const { store, handleChangePage, handleChangeLimit } = useTable({
     filters,
     fetchData,
-    fetchExport,
   });
 
   const page = pageData.page;
@@ -66,31 +50,9 @@ const Table = ({
         style={{ justifyContent: showSearch ? "space-between" : "flex-end" }}>
         {showSearch && <TableSearch showSearchDrawer={showSearchDrawer} />}
 
-        <AdditionalButtons>
-          {showExportData && (
-            <Stack direction='row'>
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    checked={isAll}
-                    onChange={(e) => setIsAll(e.target.checked)}
-                  />
-                }
-                label='All'
-                labelPlacement='start'
-              />
-              <IconButton
-                buttonType={buttonTypes.success}
-                onClick={exportData}
-                Icon={GetAppIcon}
-                tooltipText='Export'
-                buttonClassName={classes.export}
-              />
-            </Stack>
-          )}
-          {additionalButtons}
-        </AdditionalButtons>
+        <AdditionalButtons>{additionalButtons}</AdditionalButtons>
       </SearchContainer>
+
       <Paper className={classes.root}>
         <TableContainer sx={{ maxHeight: 440 }}>
           <MuiTable stickyHeader aria-label='sticky table'>
@@ -105,6 +67,7 @@ const Table = ({
                 ))}
               </TableRow>
             </TableHead>
+
             <TableBody>
               {rows.map((row, index) => {
                 return (
@@ -122,6 +85,7 @@ const Table = ({
             </TableBody>
           </MuiTable>
         </TableContainer>
+
         <div className={classes.paginationContainer}>
           <TablePagination
             rowsPerPageOptions={[10, 25, 100]}

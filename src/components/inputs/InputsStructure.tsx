@@ -1,7 +1,5 @@
 import React from "react";
 
-import clsx from "clsx";
-
 import { fieldTypes } from "assets/constants/fieldTypes";
 import CheckboxPlain from "components/inputs/CheckboxPlain";
 import DateTimePicker from "components/inputs/DateTimePicker";
@@ -10,8 +8,6 @@ import { IInputsStructure } from "components/inputs/interfaces";
 import MultilinePlain from "components/inputs/MultilinePlain";
 import SelectPlain from "components/inputs/SelectPlain";
 import { useInputsStructureStyles } from "components/inputs/styles";
-import DragAndDrop from "components/uploads/DragAndDrop";
-import ImageUpload from "components/uploads/ImageUpload";
 import { getRandomInt } from "utils/Utils";
 
 const InputsStructure = ({
@@ -54,12 +50,6 @@ const InputsStructure = ({
                 <SelectPlain {...commonProps} options={field.options ?? []} />
               );
               break;
-            case fieldTypes.DRAG_N_DROP:
-              element = <DragAndDrop {...commonProps} />;
-              break;
-            case fieldTypes.IMAGE_UPLOAD:
-              element = <ImageUpload {...commonProps} />;
-              break;
             default:
               element = <InputPlain {...commonProps} />;
               break;
@@ -67,7 +57,7 @@ const InputsStructure = ({
 
           return (
             <div
-              className={clsx(classes.element, className)}
+              className={`${classes.element} ${className}`}
               key={getRandomInt(0, 99999999)}>
               {element}
             </div>

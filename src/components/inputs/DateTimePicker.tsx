@@ -5,7 +5,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { MobileDateTimePicker } from "@mui/x-date-pickers/MobileDateTimePicker";
 import dayjs from "dayjs";
 
-import InputContainer from "components/containers/inputContainer/InputContainer";
+import InputContainer from "components/inputs/InputContainer";
 import { IDateTimePicker } from "components/inputs/interfaces";
 import { unFormatDate } from "utils/Utils";
 

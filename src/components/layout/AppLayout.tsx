@@ -27,6 +27,7 @@ const AppLayout = ({ children }: IAppLayout): React.ReactElement => {
     <Box sx={{ display: "flex" }}>
       <Header open={open} handleDrawerOpen={handleDrawerOpen} />
       <Menu open={open} handleDrawerClose={handleDrawerClose} />
+
       <Box component='main' sx={{ flexGrow: 1, p: 3, width: "50%" }}>
         <ContentHeader />
         <Breadcrumbs breadcrumb={currentPath} />

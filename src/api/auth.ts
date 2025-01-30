@@ -7,4 +7,4 @@ import { ILoginData } from "pages/Login/interfaces";
 export const login = (data: ILoginData): Promise<ILogin> =>
   axios
     .post(AuthServerUrl + webConfig.auth.login, data)
-    .then((response) => response && response.data.result);
+    .then((response) => response && response.data);

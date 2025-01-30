@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 
 import Button from "components/buttons/Button";
 import { buttonTypes } from "components/buttons/constants/buttonTypes";
@@ -32,37 +32,34 @@ const GamesTable = (): React.ReactElement => {
     </Button>
   );
 
-  return useMemo(
-    () => (
-      <>
-        <Table
-          columns={columns}
-          rows={rows}
-          pageData={pageData}
-          filters={filters}
-          showSearch={true}
-          showSearchDrawer={true}
-          additionalButtons={additionalButtons}
-          fetchData={fetchData}
-        />
-        <Drawer
-          open={open}
-          loading={loading}
-          header='Configuration'
-          handleClose={handleClose}
-          onSave={saveRow}
-          children={
-            <InputsStructure
-              fields={drawerFields}
-              setFieldValue={setFieldValue}
-              variant='block'
-            />
-          }
-        />
-        {loading && <LoadingComponent />}
-      </>
-    ),
-    [columns, rows, pageData, filters, open, loading],
+  return (
+    <>
+      <Table
+        columns={columns}
+        rows={rows}
+        pageData={pageData}
+        filters={filters}
+        showSearch={true}
+        showSearchDrawer={true}
+        additionalButtons={additionalButtons}
+        fetchData={fetchData}
+      />
+      <Drawer
+        open={open}
+        loading={loading}
+        header='Configuration'
+        handleClose={handleClose}
+        onSave={saveRow}
+        children={
+          <InputsStructure
+            fields={drawerFields}
+            setFieldValue={setFieldValue}
+            variant='block'
+          />
+        }
+      />
+      {loading && <LoadingComponent />}
+    </>
   );
 };
 

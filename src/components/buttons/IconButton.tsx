@@ -1,7 +1,6 @@
 import React from "react";
 
 import { IconButton as MuiIconButton, Tooltip } from "@mui/material";
-import clsx from "clsx";
 
 import { IIconButton } from "components/buttons/interfaces";
 import { useCommonStyle } from "components/buttons/styles";
@@ -14,18 +13,18 @@ const IconButton = (props: IIconButton): React.ReactElement => {
   const icon = (
     <MuiIconButton
       {...rest}
-      className={clsx(classes.iconButton, rest.buttonClassName)}
+      className={`${classes.iconButton} ${rest.buttonClassName}`}
       color={buttonType}>
       <Icon
         fontSize={fontSize ? fontSize : "default"}
-        className={clsx(classes.icon, rest.iconClassName)}
+        className={`${classes.icon} ${rest.iconClassName}`}
       />
     </MuiIconButton>
   );
 
   if (tooltipText)
     return (
-      <Tooltip className={clsx(rest.tooltipClassName)} title={tooltipText}>
+      <Tooltip className={rest.tooltipClassName} title={tooltipText}>
         {icon}
       </Tooltip>
     );

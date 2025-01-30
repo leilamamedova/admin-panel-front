@@ -2,7 +2,6 @@ import React from "react";
 
 import { Tooltip } from "@mui/material";
 import MuiButton from "@mui/material/Button";
-import clsx from "clsx";
 
 import { IButton } from "components/buttons/interfaces";
 import { useCommonStyle } from "components/buttons/styles";
@@ -17,7 +16,7 @@ const Button = (props: IButton): React.ReactElement => {
       {...rest}
       size='small'
       color={buttonType}
-      className={clsx(classes.button, rest.className)}
+      className={`${classes.button} ${rest.className}`}
       startIcon={Icon ? <Icon className={classes.icon} /> : null}>
       {children}
     </MuiButton>

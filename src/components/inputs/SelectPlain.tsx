@@ -3,7 +3,7 @@ import React from "react";
 import { TextField } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 
-import InputContainer from "components/containers/inputContainer/InputContainer";
+import InputContainer from "components/inputs/InputContainer";
 import { ISelectPlain } from "components/inputs/interfaces";
 
 const SelectPlain = ({
