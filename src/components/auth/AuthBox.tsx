@@ -11,9 +11,7 @@ import Auth from "store/actions/AuthActions";
 import { IReducers } from "store/reducers/interfaces/reducers";
 
 export const logOut = (): void => {
-  // localStorage.removeItem("token");
-  // localStorage.removeItem("refresh_token");
-  // localStorage.removeItem("refresh_token_expiry_time");
+  localStorage.removeItem("token");
   window.location.reload();
 };
 

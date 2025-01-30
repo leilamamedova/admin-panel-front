@@ -1,12 +1,10 @@
 const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 export const defaultRoute = SERVER_URL + "/api";
-export const AuthServerUrl = defaultRoute + "/Auth";
 
 const webConfig = {
   auth: {
     login: "/login",
-    refreshToken: "/refresh-token",
   },
   users: {
     getUsers: "/users",

@@ -36,13 +36,10 @@ const TableSearchDrawer = ({
               <Button
                 color='primary'
                 onClick={searchByFields}
-                className={classes.actionButton}
                 startIcon={<SearchIcon />}>
                 Search
               </Button>
-              <Button onClick={emptyFields} className={classes.actionButton}>
-                Reset
-              </Button>
+              <Button onClick={emptyFields}>Reset</Button>
             </CardActions>
           </Card>
         </ClickAwayListener>

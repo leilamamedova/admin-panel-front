@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import Notification from "notifications/Notification";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -21,30 +22,22 @@ export const useLogin = (): IUseLogin => {
   const auth = new Auth(useDispatch());
 
   const onSubmit = async (): Promise<void> => {
-    localStorage.setItem("token", "dummyJwtToken12345");
-    localStorage.setItem("refresh_token", "dummyRefreshToken67890");
-    localStorage.setItem("refresh_token_expiry_time", "2025-12-31T23:59:59Z");
+    setLoading(true);
 
-    auth.setSessionStatus(sessionStatuses.active);
-    navigate(routes.users);
-    // setLoading(true);
-    // await login(loginData)
-    //   .then((response) => {
-    //     if (response) {
-    //       localStorage.setItem("token", response.jwtToken);
-    //       localStorage.setItem("refresh_token", response.refreshToken);
-    //       localStorage.setItem(
-    //         "refresh_token_expiry_time",
-    //         response.refreshTokenExpiryTime,
-    //       );
+    try {
+      const response = await login(loginData);
 
-    //       auth.setSessionStatus(sessionStatuses.active);
-    //       navigate(routes.users);
-    //     }
-    //   })
-    //   .finally(() => {
-    //     setLoading(false);
-    //   });
+      if (response) {
+        localStorage.setItem("token", response.jwtToken);
+
+        auth.setSessionStatus(sessionStatuses.active);
+        navigate(routes.users);
+      }
+    } catch (error) {
+      Notification.error("Login failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return {

@@ -51,6 +51,5 @@ export const useTableSearchDrawerStyles = makeStyles((theme: Theme) =>
       padding: "10px !important",
       flex: "1 0 30%",
     },
-    actionButton: {},
   }),
 );
