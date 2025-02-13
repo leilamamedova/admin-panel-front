@@ -25,7 +25,6 @@ instance.interceptors.response.use(
     if (error.response && error.response.status === 401) {
       logOut();
     }
-    return Promise.reject(error);
   },
 );
 

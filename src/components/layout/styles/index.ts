@@ -70,22 +70,6 @@ export const useAuthLayoutStyles = makeStyles(() =>
         },
       },
     },
-    typography: {
-      color: colors.blue[100],
-      display: "block",
-      "&:hover": {
-        textDecoration: "underline",
-      },
-    },
-    notFoundPage: {
-      "& h1": {
-        fontSize: "150px",
-        marginBottom: "0.1em",
-      },
-      "& span": {
-        fontSize: "20px",
-      },
-    },
   }),
 );
 
