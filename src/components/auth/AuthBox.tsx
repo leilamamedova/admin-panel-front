@@ -16,52 +16,50 @@ export const logOut = (): void => {
 };
 
 const AuthBox = (): React.ReactElement => {
-  // const location = useLocation();
-  // const navigate = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  // const auth = new Auth(useDispatch());
+  const auth = new Auth(useDispatch());
 
-  // const authState = useSelector((state: IReducers) => state.authReducer);
+  const authState = useSelector((state: IReducers) => state.authReducer);
 
-  // const redirectIfUserIsNotAuthentificated = (pathname: string): any => {
-  //   if (
-  //     authState.sessionStatus === sessionStatuses.inactive &&
-  //     Object.values(allowedRoutes).indexOf(pathname) === -1
-  //   )
-  //     return navigate(allowedRoutes.login);
+  const redirectIfUserIsNotAuthentificated = (pathname: string): any => {
+    if (
+      authState.sessionStatus === sessionStatuses.inactive &&
+      Object.values(allowedRoutes).indexOf(pathname) === -1
+    )
+      return navigate(allowedRoutes.login);
 
-  //   return null;
-  // };
+    return null;
+  };
 
-  // const redirectIfUserIsAlreadyAuthentificated = (pathname: string): any => {
-  //   if (
-  //     authState.sessionStatus === sessionStatuses.active &&
-  //     Object.values(allowedRoutes).indexOf(pathname) >= 0
-  //   )
-  //   return navigate(routes.users);
+  const redirectIfUserIsAlreadyAuthentificated = (pathname: string): any => {
+    if (
+      authState.sessionStatus === sessionStatuses.active &&
+      Object.values(allowedRoutes).indexOf(pathname) >= 0
+    )
+      return navigate(routes.users);
 
-  //   return null;
-  // };
+    return null;
+  };
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("token")) {
-  //     auth.setSessionStatus(sessionStatuses.active);
-  //   } else {
-  //     auth.setSessionStatus(sessionStatuses.inactive);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      auth.setSessionStatus(sessionStatuses.active);
+    } else {
+      auth.setSessionStatus(sessionStatuses.inactive);
+    }
+  }, []);
 
   return (
     <div className='d-flex flex-grow-1'>
-      {/* {redirectIfUserIsNotAuthentificated(location.pathname)}
-      {redirectIfUserIsAlreadyAuthentificated(location.pathname)} */}
-      {/* {authState.sessionStatus !== sessionStatuses.start ? (
+      {redirectIfUserIsNotAuthentificated(location.pathname)}
+      {redirectIfUserIsAlreadyAuthentificated(location.pathname)}
+      {authState.sessionStatus !== sessionStatuses.start ? (
         <Pages />
       ) : (
         <LoadingComponent />
-      )} */}
-
-      <Pages />
+      )}
     </div>
   );
 };
